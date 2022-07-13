@@ -28,6 +28,9 @@ import {
 
 // import HomeScreen from './src/screens/Home';
 import Post from './src/components/Post';
+import feed from './assets/data/feed';
+
+const post1 = feed[0];
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -39,7 +42,7 @@ const App: () => Node = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       {/* <HomeScreen /> */}
-      <Post />
+      <Post post={post1} />
     </SafeAreaView>
   );
 };
