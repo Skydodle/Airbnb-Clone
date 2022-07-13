@@ -27,7 +27,9 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 // import HomeScreen from './src/screens/Home';
-import Post from './src/components/Post';
+// import Post from './src/components/Post';
+import SearchResultsScreen from './src/screens/SearchResults';
+
 import feed from './assets/data/feed';
 
 const post1 = feed[0];
@@ -42,7 +44,8 @@ const App: () => Node = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       {/* <HomeScreen /> */}
-      <Post post={post1} />
+      {/* <Post post={post1} /> */}
+      <SearchResultsScreen />
     </SafeAreaView>
   );
 };
