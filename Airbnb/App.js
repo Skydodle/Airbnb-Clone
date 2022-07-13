@@ -28,24 +28,26 @@ import {
 
 // import HomeScreen from './src/screens/Home';
 // import Post from './src/components/Post';
-import SearchResultsScreen from './src/screens/SearchResults';
+// import SearchResultsScreen from './src/screens/SearchResults';
+import DestinationSearchScreen from './src/screens/DestinationSearch';
 
 import feed from './assets/data/feed';
 
 const post1 = feed[0];
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  // const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  // const backgroundStyle = {
+  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  // };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView>
       {/* <HomeScreen /> */}
       {/* <Post post={post1} /> */}
-      <SearchResultsScreen />
+      {/* <SearchResultsScreen /> */}
+      <DestinationSearchScreen />
     </SafeAreaView>
   );
 };
