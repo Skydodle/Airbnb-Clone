@@ -6,6 +6,7 @@
  * @flow strict-local
  */
 
+import 'react-native-gesture-handler';
 import React from 'react';
 import type {Node} from 'react';
 import {
@@ -30,11 +31,11 @@ import {
 // import Post from './src/components/Post';
 // import SearchResultsScreen from './src/screens/SearchResults';
 // import DestinationSearchScreen from './src/screens/DestinationSearch';
-import GuestsScreen from './src/screens/Guests';
+// import GuestsScreen from './src/screens/Guests';
 
 import feed from './assets/data/feed';
 
-const post1 = feed[0];
+import Router from './src/navigation/Router';
 
 const App: () => Node = () => {
   // const isDarkMode = useColorScheme() === 'dark';
@@ -44,13 +45,16 @@ const App: () => Node = () => {
   // };
 
   return (
-    <SafeAreaView>
-      {/* <HomeScreen /> */}
-      {/* <Post post={post1} /> */}
-      {/* <SearchResultsScreen /> */}
-      {/* <DestinationSearchScreen /> */}
-      <GuestsScreen />
-    </SafeAreaView>
+    <>
+      <Router />
+    </>
+    // <SafeAreaView>
+    //   <HomeScreen />
+    //   {/* <Post post={post1} /> */}
+    //   {/* <SearchResultsScreen /> */}
+    //   {/* <DestinationSearchScreen /> */}
+    //   {/* <GuestsScreen /> */}
+    // </SafeAreaView>
   );
 };
 
