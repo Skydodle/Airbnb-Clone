@@ -9,8 +9,8 @@ module.exports = {
     es2021: true,
     'react-native/react-native': true,
   },
+  extends: 'eslint:recommended',
   extends: [
-    'eslint:recommended',
     'plugin:react',
     'plugin:react-native',
     'plugin:testing-library/react',
@@ -22,5 +22,19 @@ module.exports = {
     requireConfigFile: false, // <== ADD THIS
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
+  },
+  rules: {
+    // enable additional rules
+    indent: ['error', 4],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'double'],
+    semi: ['error', 'always'],
+
+    // override configuration set by extending "eslint:recommended"
+    'no-empty': 'warn',
+    'no-cond-assign': ['error', 'always'],
+
+    // disable rules from base configurations
+    'for-direction': 'off',
   },
 };
