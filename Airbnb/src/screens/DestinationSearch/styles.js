@@ -2,11 +2,15 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    padding: 20,
+    height: '100%',
+    backgroundColor: 'white',
   },
   textInput: {
+    // marginTop: 20,
+    // marginBottom: 20,
     fontSize: 20,
-    marginBottom: 20,
+    margin: 15,
   },
   row: {
     flexDirection: 'row',
@@ -21,9 +25,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginRight: 15,
   },
-  locationText: {
-
-  },
+  locationText: {},
 });
 
 export default styles;
