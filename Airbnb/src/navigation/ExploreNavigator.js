@@ -2,7 +2,8 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import HomeScreen from '../screens/Home';
-import SearchResultsScreen from '../screens/SearchResults';
+// import SearchResultsScreen from '../screens/SearchResults';
+import SearchResultsTabNavigator from './SearchResultsTabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -14,13 +15,19 @@ const ExploreNavigator = props => {
         component={HomeScreen}
         options={{
           headerShown: false,
+          headerBackTitleStyle: {
+            fontSize: 15,
+          },
         }}
       />
       <Stack.Screen
         name={'SearchResults'}
-        component={SearchResultsScreen}
+        component={SearchResultsTabNavigator}
         options={{
           title: 'Search your destination',
+          headerBackTitleStyle: {
+            fontSize: 15,
+          },
         }}
       />
     </Stack.Navigator>
