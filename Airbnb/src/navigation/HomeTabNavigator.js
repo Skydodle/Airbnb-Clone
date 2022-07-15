@@ -8,12 +8,10 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Feather from 'react-native-vector-icons/Feather';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import ExploreNavigator from './ExploreNavigator';
-import SearchResultsMap from '../screens/SearchResultsMap';
-import PostScreen from '../screens/PostScreen';
 
 const Tab = createBottomTabNavigator();
 
-const HomeTabNavigator = props => {
+const HomeTabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={{

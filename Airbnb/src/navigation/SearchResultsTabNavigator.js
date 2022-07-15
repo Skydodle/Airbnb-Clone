@@ -7,7 +7,7 @@ import SearchResultsMap from '../screens/SearchResultsMap';
 
 const Tab = createMaterialTopTabNavigator();
 
-const SearchResultsTabNavigator = props => {
+const SearchResultsTabNavigator = () => {
   return (
     <Tab.Navigator
       tabBarOptions={{

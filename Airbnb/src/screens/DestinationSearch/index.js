@@ -1,17 +1,13 @@
-import React, {useState} from 'react';
-import {View, FlatList, Text, TextInput, Pressable} from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
+import 'dotenv/config';
 
-import Post from '../../components/Post';
-import feed from '../../../assets/data/feed';
-import SearchResults from '../../../assets/data/search';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import SuggestionRow from './SuggestionRow';
 
-const DestinationSearchScreen = props => {
-  const [inputText, setInputText] = useState('');
-
+const DestinationSearchScreen = () => {
   const navigation = useNavigation();
 
   return (
@@ -28,7 +24,7 @@ const DestinationSearchScreen = props => {
           textInput: styles.textInput,
         }}
         query={{
-          key: 'AIzaSyAlrJyjVVQjiccofKNGljXBVAGLocr4njY',
+          key: process.env.API_KEY,
           language: 'en',
           types: '(cities)',
         }}

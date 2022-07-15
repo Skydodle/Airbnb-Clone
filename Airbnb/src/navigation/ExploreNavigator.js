@@ -7,7 +7,7 @@ import SearchResultsTabNavigator from './SearchResultsTabNavigator';
 
 const Stack = createStackNavigator();
 
-const ExploreNavigator = props => {
+const ExploreNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen

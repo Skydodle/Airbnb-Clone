@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
-import {View, FlatList, useWindowDimensions, viewableItems} from 'react-native';
+import {View, FlatList, useWindowDimensions} from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
 import places from '../../../assets/data/feed';
