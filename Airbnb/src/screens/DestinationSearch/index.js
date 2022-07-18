@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
-import 'dotenv/config';
+import {API_KEY} from '@env';
 
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import SuggestionRow from './SuggestionRow';
@@ -24,7 +24,7 @@ const DestinationSearchScreen = () => {
           textInput: styles.textInput,
         }}
         query={{
-          key: process.env.API_KEY,
+          key: API_KEY,
           language: 'en',
           types: '(cities)',
         }}
